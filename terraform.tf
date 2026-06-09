@@ -3,7 +3,7 @@ terraform {
     organization = "vivacitytech"
     
     workspaces {
-      name = "vpc-dev"
+      name = "tf-vpc"
     }
   }
   
