@@ -18,7 +18,7 @@ variable "environment" {
 variable "vpc_name" {
   type        = string
   description = "VPC network name"
-  default     = "production-vpc"
+  default     = "non-production-vpc"
 }
 
 variable "auto_create_subnetworks" {
