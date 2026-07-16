@@ -1,15 +1,15 @@
 output "vpc_id" {
-  value       = google_compute_network.vpc.id
+  value       = local.network_id
   description = "VPC network ID"
 }
 
 output "vpc_name" {
-  value       = google_compute_network.vpc.name
+  value       = var.manage_network ? google_compute_network.vpc[0].name : data.google_compute_network.existing[0].name
   description = "VPC network name"
 }
 
 output "vpc_self_link" {
-  value       = google_compute_network.vpc.self_link
+  value       = var.manage_network ? google_compute_network.vpc[0].self_link : data.google_compute_network.existing[0].self_link
   description = "VPC self link"
 }
 
