@@ -3,8 +3,8 @@ terraform {
     organization = "vivacitytech"
     
     workspaces {
-      name = "tf-vpc"
-    }
+      name = "vpc-dev"
+      }
   }
   
   required_providers {
